@@ -13,6 +13,9 @@ var ErrorModal = React.createClass({
 	componentDidMount: function(){
 		var modal = new Foundation.Reveal($('#error-modal'));
 		modal.open();
+		setTimeout(function(){
+			window.location.reload(true);
+		}, 2000);
 	},
 	render: function(){
 		var {title, message} = this.props;
